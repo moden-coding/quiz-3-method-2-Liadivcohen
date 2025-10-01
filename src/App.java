@@ -55,38 +55,73 @@
 
 public class App {
 
-    public static void computePerimeter() {
+    
+    int number  = 0;
+    int height = 0;
+    public static int computePerimeter(String mode, int number, int height) {
 
-    }
+        if (number < 0 || height < 0) {
+            return -1;
+        }else if (number > 100 || height > 100 ) {
+            return -1;
+        }else if (mode.equals("rect")){
+        
+            return(2*(height+ number));
+        }else if (mode.equals("square")){
+            return 4*number;
+        }
+          return -1;
+         }
     public static void main(String[] args) {
         // B- range
         // System.out.println("Task 1:");
-        // computePerimeter(); // should PRINT 20
+         //computePerimeter(); // should PRINT 20
+
+         //my code:
+         //System.out.println(20);;
 
         // B range
         // System.out.println("Task 2:");
-        // computePerimeter(5, 3);  // should PRINT 16
-        // computePerimeter(10, 2); // should PRINT 24
+        //computePerimeter(5, 3);  // should PRINT 16
+        //computePerimeter(10, 2); // should PRINT 24
+
+        //my code:
+        //int number  = 0;
+        //int height = 0;
+        // public static void computePerimeter( int number, int height) {
+        // System.out.println(2*(height+ number));
 
         // B+ range
         // System.out.println("Task 3:");
-        // int p1 = computePerimeter(5, 3);  // expect 16
-        // int p2 = computePerimeter(10, 2); // expect 24
-        // System.out.println(p1);
-        // System.out.println(p2);
+        //int p1 = computePerimeter(5, 3);  // expect 16
+        //int p2 = computePerimeter(10, 2); // expect 24
+        //System.out.println(p1);
+        //System.out.println(p2);
+
+        //my code:
+        //return(2*(height+ number));
+
+
 
         // A range
         // System.out.println("Task 4:");
-        // System.out.println(computePerimeter(5, -3));  // -1 (invalid)
-        // System.out.println(computePerimeter(100, 100)); // 400 (valid)
-        // System.out.println(computePerimeter(101, 1)); // -1 (too large)
+       //System.out.println(computePerimeter(5, -3));  // -1 (invalid)
+        //System.out.println(computePerimeter(100, 100)); // 400 (valid)
+       // System.out.println(computePerimeter(101, 1)); // -1 (too large)
+
+        //my code:
+        //  if (number < 0 || height < 0) {
+        //return -1;
+        //}else if (number > 100 || height > 100 ) {
+        //return -1;
+      //  return(2*(height+ number));
 
         // A+ range
         // System.out.println("Task 5:");
-        // System.out.println(computePerimeter("rect", 5, 3));   // 16
-        // System.out.println(computePerimeter("square", 7, 0)); // 28
-        // System.out.println(computePerimeter("hex", 2, 2));    // -1 (unknown)
-        // System.out.println(computePerimeter("rect", -1, 9));  // -1 (invalid)
+        System.out.println(computePerimeter("rect", 5, 3));   // 16
+        System.out.println(computePerimeter("square", 7, 0)); // 28
+        System.out.println(computePerimeter("hex", 2, 2));    // -1 (unknown)
+        System.out.println(computePerimeter("rect", -1, 9));  // -1 (invalid)
     }
 }
 
